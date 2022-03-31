@@ -18,3 +18,7 @@ div {
     display: inline-block
 
 }
+
+:any-link:hover  {
+    color: hsl(261, 38%, 51%);
+}
