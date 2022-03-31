@@ -1,4 +1,3 @@
-const url = "https://pokeapi.co/api/v2/pokemon?limit=50"
 const main = document.querySelector("main")
 
 function addPokemonImage(pokemon) {
@@ -11,15 +10,11 @@ function addPokemonImage(pokemon) {
     main.append(div)
 }
 
-fetch(url)
+const url = new URL(window.location)
+const queryString = new URLSearchParams(url.search)
+fetch(`https://pokeapi.co/api/v2/pokemon/${queryString.get("pokemon")}`)
     .then(response => {
         return response.json()
     }).then(parsedResponse => {
-        const urls = parsedResponse.results.map(result => result.url)
-        const fetches = urls.map(url => fetch(url).then(response => response.json()))
-        return Promise.all(fetches)
-    }).then(responses => {
-        responses.forEach(response => {
-            addPokemonImage(response)
-        })
-    })
+        addPokemonImage(parsedResponse)
+    })   
