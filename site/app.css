@@ -4,12 +4,16 @@ body { background-color: rgba(255, 228, 196, 0.86);
 }
 
 h1 {
-    font-size: 60px;
-    padding-bottom: .3em;
+    padding: .5em;
+}
+
+h1>a {
+    font-size: 50px;
+    
 }
 
 h2 {
-    font-size:40px;
+    font-size:45px;
     color: rgb(14, 150, 228);
     padding-bottom: .3em;
 }
@@ -17,8 +21,12 @@ h2 {
 div {
     display: inline-block
 
+
 }
 
 :any-link:hover  {
     color: hsl(261, 38%, 51%);
+}
+a { font-size: 25px;
+
 }

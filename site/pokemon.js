@@ -3,10 +3,11 @@ const main = document.querySelector("main")
 function addPokemonImage(pokemon) {
     const div = document.createElement("div")
     div.innerHTML = `
-    <a href="pokemon.html?pokemon=${pokemon.name}">
+    <figure>
         <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}" />
-        </a>
-    `
+        <figcaption><a href="pokemon.html?pokemon=${pokemon.name}">${pokemon.name}</a></figcaption>
+    </figure>
+        `
     main.append(div)
 }
 
