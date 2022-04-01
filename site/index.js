@@ -2,11 +2,12 @@ const url = "https://pokeapi.co/api/v2/pokemon?limit=50"
 const main = document.querySelector("main")
 
 function addPokemonImage(pokemon) {
+    const titleName =`${pokemon.name[0].toUpperCase()}${pokemon.name.slice(1)}`
     const div = document.createElement("div")
     div.innerHTML = `
     <figure>
-        <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}" />
-        <figcaption><a href="pokemon.html?pokemon=${pokemon.name}">${pokemon.name}</a></figcaption>
+        <img src="${pokemon.sprites.front_default}" alt="${titleName}" />
+        <figcaption><a href="pokemon.html?pokemon=${titleName}">${titleName}</a></figcaption>
     </figure>
     `
     main.append(div)

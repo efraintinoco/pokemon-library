@@ -9,7 +9,6 @@ h1 {
 
 h1>a {
     font-size: 50px;
-    
 }
 
 h2 {
@@ -20,13 +19,15 @@ h2 {
 
 div {
     display: inline-block
-
-
 }
 
 :any-link:hover  {
     color: hsl(261, 38%, 51%);
 }
-a { font-size: 25px;
 
+a { font-size: 25px;
+}
+
+.ability-name{
+    font: 50px;
 }
