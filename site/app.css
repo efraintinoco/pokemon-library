@@ -1,6 +1,16 @@
-body { background-color: rgba(255, 228, 196, 0.86);
+.spinner {
+    width: 10%;
+}
+
+.hidden {
+    display: none;
+}    
+
+body { 
+    background-color: rgba(255, 228, 196, 0.816);
     margin: 0;
     text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 h1 {
@@ -9,7 +19,6 @@ h1 {
 
 h1>a {
     font-size: 50px;
-    
 }
 
 h2 {
@@ -19,14 +28,28 @@ h2 {
 }
 
 div {
-    display: inline-block
-
-
+    display: inline-block;
 }
 
 :any-link:hover  {
-    color: hsl(261, 38%, 51%);
+    color:rgb(141, 206, 244);
 }
-a { font-size: 25px;
 
+a { 
+    font-size: 25px;
+    color:rgb(14, 150, 228);
+}
+
+ul {
+    list-style: none;
+    display: inline-block;
+    line-height: 1.5em;
+}
+
+span {
+    color:rgb(14, 150, 228);
+    font-weight: bold;
+    display: grid;
+    list-style: block;
+    font-size: 20px;
 }

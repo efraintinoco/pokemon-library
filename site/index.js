@@ -1,5 +1,8 @@
 const url = "https://pokeapi.co/api/v2/pokemon?limit=50"
 const main = document.querySelector("main")
+const spinner = document.querySelector(".spinner")
+
+
 
 function addPokemonImage(pokemon) {
     const div = document.createElement("div")
@@ -22,6 +25,7 @@ fetch(url)
         return Promise.all(fetches)
     }).then(responses => {
         responses.forEach(response => {
+            spinner.classList.add("hidden")
             addPokemonImage(response)
         })
     })
